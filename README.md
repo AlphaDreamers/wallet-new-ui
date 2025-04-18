@@ -1,16 +1,37 @@
-# Starter base
 
-A starting point to help you set up your project quickly and use the common components provided by `react-native-reusables`. The idea is to make it easier for you to get started.
+---
 
-## Features
+## 🛠️ Setup Instructions & UI Fixes
 
-- NativeWind v4
-- Dark and light mode
-  - Android Navigation Bar matches mode
-  - Persistent mode
-- Common components
-  - ThemeToggle, Avatar, Button, Card, Progress, Text, Tooltip
+### 📂 File Locations
+- **Dashboard Page Styles**  
+  Check and modify the stylesheet located at:  
+  `app/dashboard/page.tsx`
 
-<img src="https://github.com/mrzachnugent/react-native-reusables/assets/63797719/42c94108-38a7-498b-9c70-18640420f1bc"
-     alt="starter-base-template"
-     style="width:270px;" />
+- **Login Page**  
+  View and edit the login UI from:  
+  `app/(auth)/login/index.tsx`
+
+---
+
+### 📦 Reusable Components
+To use a reusable input component, run the following command:
+
+```bash
+npx @react-native-reusables/cli@latest add input
+```
+
+---
+
+### ✅ What To Do
+
+1. **Run the App**
+    - Start the application and verify the **Dashboard UI** is working correctly.
+
+2. **UI Fixes Needed**
+    - On the **Dashboard page**, fix the UI for the forms triggered when users click:
+        - `Send` button
+        - `Receive` button
+
+Thank u .
+---

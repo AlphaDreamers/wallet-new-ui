@@ -55,7 +55,6 @@ export default function RootLayout() {
   return (
       <ThemeProvider value={theme}>
         <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
-
         <SafeAreaView
             style={{
               flex: 1,
@@ -71,9 +70,38 @@ export default function RootLayout() {
                     headerShown: false,
                   }}
               />
+              <Stack.Screen
+                  name="send"
+                  options={{
+                    headerShown: false,
+                  }}
+              />
+              <Stack.Screen
+                name="receive"
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name="dashboard/page"
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name="confirm_transaction/index"
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name="transaction-success/index"
+                options={{
+                  headerShown: false,
+                }}
+              />
             </Stack>
           </View>
-
           <PortalHost />
         </SafeAreaView>
       </ThemeProvider>

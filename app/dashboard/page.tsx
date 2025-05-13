@@ -9,6 +9,7 @@ import { Text } from '~/components/ui/text';
 import { Card } from "react-native-paper";
 import QRModal from "~/components/QRModal";
 import { Input } from '~/components/ui/input';
+import { useRouter } from 'expo-router';
 
 interface Transaction {
     title: string;
@@ -22,17 +23,13 @@ export default function DashBoardScreen() {
     const [scannedAddress, setScannedAddress] = useState('');
     const [isQRScannerVisible, setQRScannerVisible] = useState(false);
     const slideAnim = useRef(new Animated.Value(0)).current;
+    const router = useRouter();   
 
     const userAddress = "FDSJLKFDKJSJLFDSLJKLFJDSLJLFDKFJJKFD";
 
     const handleSend = () => {
-        setIsFormVisible(true);
-        Animated.timing(slideAnim, {
-            toValue: 1,
-            duration: 500,
-            useNativeDriver: true,
-        }).start();
-    };
+        router.push('../send');
+      };
 
     const handleCloseForm = () => {
         Animated.timing(slideAnim, {
@@ -43,13 +40,8 @@ export default function DashBoardScreen() {
     };
 
     const handleOnReceive = () => {
-        setQRVisible(true);
-        Animated.timing(qrSlideAnim, {
-            toValue: 1,
-            duration: 500,
-            useNativeDriver: true,
-        }).start();
-    };
+        router.push('../receive');
+      };
 
     const handleScanSuccess = (e: { data: string }) => {
         setScannedAddress(e.data);
